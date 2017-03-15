@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Vandana | #{title}
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/mdb.min.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:700,400', rel='stylesheet')
+  body
+    // load navbar.pug
+    include navbar
+
+    //block content
+    block content
+    
+    //footer
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/mdb.min.js')

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+ .container
+  .login-card.card.float-sm-right.col-md-4
+    .card-block
+      h4.card-title Sign In
+      p.card-text Login to get started!
+      hr
+      form.py-1(method='POST', action='/login')
+        .md-form
+          input#email.form-control(type='email', name='email')
+          |  
+          label(for='email') Email Address
+        .md-form
+          input#password.form-control(type='password', name='password')
+          |  
+          label(for='password') Password
+        |  
+        a.btn.btn-primary.btn-signin.pt-1(type='submit') LOG IN
+
