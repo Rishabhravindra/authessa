@@ -15,7 +15,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 app.use(session( {
   secret: 'Rishu lives in a tree',
   resave: true,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: new MongoStore ({
+  	mongooseConnection: db
+  })
 }))
 
 // make user ID available in all templates 
