@@ -1,0 +1,28 @@
+{
+  "name": "simple-auth",
+  "version": "1.0.0",
+  "description": "Simple authentication page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabhravindra/simple-auth.git"
+  },
+  "author": "Rishabh Ravindra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rishabhravindra/simple-auth/issues"
+  },
+  "homepage": "https://github.com/Rishabhravindra/simple-auth#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "mongoose": "^4.9.0",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta11"
+  }
+}
