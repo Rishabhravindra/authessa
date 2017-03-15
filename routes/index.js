@@ -10,21 +10,20 @@ router.get('/register', function(req,res,next) {
 // /POST for register 
 router.post('/register', function(req,res,next) {
 	if(req.body.email 
-		&& req.body.confirmEmail
-		&& req.body.pwd 
+		&& req.body.name
+		&& req.body.password 
 		&& req.body.confirmPwd 
 		&& req.body.hiking){
-	if(req.body.pwd !== req.body.confirmPwd ||
-	req.body.email !== req.body.confirmEmail) {
-				var err = new Error('Passwords or email ids do not match');
+	if(req.body.password !== req.body.confirmPwd) {
+				var err = new Error('Passwords ids do not match');
 				err.status = 400;
 				return next(err);
 			}
-
 	//create object model from input
 		var userData = {
 			email: req.body.email,
-			password: req.body.pwd,
+			password: req.body.password,
+			name: req.body.name,
 			hiking: req.body.hiking
 		};
 
@@ -45,6 +44,36 @@ router.post('/register', function(req,res,next) {
 		return next(err);
 	}
 });
+
+//GET logout
+router.get('/logout', function(req,res,next) {
+	if(req.session) {
+		// delete session object
+		req.session.destroy(function(err) {
+			if(err) {
+				return next(err);
+			}
+			else {
+				return res.redirect('/');
+			}
+		});
+	}
+});
+// /GET profile
+router.get('/profile', function(req, res, next) {
+	User.findById(req.session.userId).exec(function(error, user) {
+		if(error) {
+			return next(error);
+		}
+		else {
+			return res.render('profile', {title: 'Profile',
+										  name: user.name,
+								 		  email: user.email,
+								 		  hiking: user.hiking})
+		}
+	})
+});
+
 //route for index
 router.get('/', function(req,res,next) {
 	return res.render('index', { title: 'Home'});

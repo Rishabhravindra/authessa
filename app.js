@@ -6,17 +6,23 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 //mongodb connection
-mongoose.connect("mongodb://localhost:27017/bookworm");
+mongoose.connect("mongodb://localhost:27017/vandana");
 var db = mongoose.connection;
 
 //mongo error handler
 db.on('error', console.error.bind(console, 'connection error:'));
+// use sessions for tracking logins
+app.use(session( {
+  secret: 'Rishu lives in a tree',
+  resave: true,
+  saveUninitialized: false
+}))
 
 // make user ID available in all templates 
 app.use(function(req, res, next) {
-	res.locals.currentUser = req.session.userId;
-	next();
-})
+		res.locals.currentUser = req.session.userId;
+		next();
+	})
 // parse incoming requests
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

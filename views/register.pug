@@ -3,21 +3,21 @@ extends layout
 block content
   .reg-container.container
     h1.h1-responsive.text-xs-center Sign Up
-    form.reg-form.py-1(method='POST', action='/register')
+    form.reg-form.py-1(method='POST' action='/register')
       .form-inline
         .md-form.form-group
-          input#email.form-control(type='email', name='email')
+          input#email.form-control(type='text', name='email')
           |  
           label(for='email') Email Address
         .md-form.form-group
-          input#confirmEmail.form-control(type='email', name='confirmEmail')
+          input#name.form-control(type='text', name='name')
           |  
-          label(for='confirmEmail') Confirm email
+          label(for='name') Name
       .form-inline
         .md-form.form-group
-          input#pwd.form-control(type='password', name='pwd')
+          input#password.form-control(type='password', name='password')
           |  
-          label(for='pwd') Create Password
+          label(for='password') Create Password
         .md-form.form-group
           input#confirmPwd.form-control(type='password', name='confirmPwd')
           |  
@@ -26,8 +26,8 @@ block content
         input#hiking.form-control(type='text', name='hiking')
         |  
         label(for='hiking') Do you want to go hiking?(Yes/No)
-      |  
-      a.btn.btn-primary.btn-submit.pt-1.float-sm-right(type='submit') Submit
+        |  
+        button.btn.btn-primary.btn-submit.pt-1.float-sm-right(type='submit') Submit
 
 
     

@@ -8,17 +8,12 @@ var UserSchema = new mongoose.Schema(
 		required: true,
 		trim: true
 	}, 
-	confirmEmail: {
+	name: {
 		type: String,
-		unique: true,
 		required: true,
 		trim: true
 	}, 
 	password: {
-		type: String,
-		required: true
-	},
-	confirmPassword: {
 		type: String,
 		required: true
 	},
