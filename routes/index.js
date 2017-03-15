@@ -1,9 +1,49 @@
 var express = require('express');
 var router = express.Router();
+var User = require('../models/user');
 
 // /GET for register
 router.get('/register', function(req,res,next) {
 	return res.render('register', {title: 'Sign Up'});
+});
+
+// /POST for register 
+router.post('/register', function(req,res,next) {
+	if(req.body.email 
+		&& req.body.confirmEmail
+		&& req.body.pwd 
+		&& req.body.confirmPwd 
+		&& req.body.hiking){
+	if(req.body.pwd !== req.body.confirmPwd ||
+	req.body.email !== req.body.confirmEmail) {
+				var err = new Error('Passwords or email ids do not match');
+				err.status = 400;
+				return next(err);
+			}
+
+	//create object model from input
+		var userData = {
+			email: req.body.email,
+			password: req.body.pwd,
+			hiking: req.body.hiking
+		};
+
+	// use schema's create mehtod
+	User.create(userData, function(error, user) {
+		if(error) {
+			return next(error);
+		}
+		else {
+			req.session.userId = user._id;
+			return res.redirect('/profile');
+		}
+	});		
+	}
+	else {
+		var err = new Error('All fields required');
+		err.status = 400;
+		return next(err);
+	}
 });
 //route for index
 router.get('/', function(req,res,next) {
