@@ -32,7 +32,15 @@ Log In button
 ***************/
 .login {
   background-color: #fff;
+  border-style: solid;
   color: #1A91FF !important;
+}
+/***************
+Log In button
+***************/
+.logout {
+  border-style: solid;
+  border-color: #fff; 
 }
 /****************
 login card
