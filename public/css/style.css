@@ -96,3 +96,9 @@ Add Gilroy Font
     font-family: GilroyBold;
     src: url(../fonts/Gilroy-ExtraBold.otf);
 }
+/*************
+Error message
+*************/
+.err-msg {
+  color: #fff;
+}
