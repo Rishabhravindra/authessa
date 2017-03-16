@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var mid = require('../middleware');
 
 // /GET for register
 router.get('/register', function(req,res,next) {
@@ -60,7 +61,8 @@ router.get('/logout', function(req,res,next) {
 	}
 });
 // /GET profile
-router.get('/profile', function(req, res, next) {
+router.get('/profile', mid.requiresLogin, function(req, res, next) {
+		
 	User.findById(req.session.userId).exec(function(error, user) {
 		if(error) {
 			return next(error);
@@ -69,13 +71,13 @@ router.get('/profile', function(req, res, next) {
 			return res.render('profile', {title: 'Profile',
 										  name: user.name,
 								 		  email: user.email,
-								 		  hiking: user.hiking})
+								 		  hiking: user.hiking});	
 		}
 	})
 });
 
 //GET /login
-router.get('/login', function(req,res,next) {
+router.get('/login', mid.loggedOut, function(req,res,next) {
 	return res.render('login', {title: 'Log In'});
 })
 
