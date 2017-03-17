@@ -28,6 +28,21 @@ Navbar
   font-size: 1.5rem;
 }
 /***************
+Index hero
+***************/
+.desc {
+  color: #fff;
+  font-size: 65px; 
+}
+p {
+  color: #fff;
+  font-family: 'GilroyBold', sans-serif;
+  font-size: 45px;
+}
+.action {
+  color: #006acd;
+}
+/***************
 Log In button
 ***************/
 .login {
