@@ -2,9 +2,9 @@
   "name": "simple-auth",
   "version": "1.0.0",
   "description": "Simple authentication page",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./app"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "mongoose": "^4.9.0",
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta11"
+  },
+  "engines": {
+    "node" : "6.10.0"
   }
 }
