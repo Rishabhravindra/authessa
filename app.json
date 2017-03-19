@@ -2,7 +2,7 @@
   "name": "Authessa",
   "description": "Simple authentication system built with Node, Express, and Mongo",
   "repository": "https://github.com/Rishabhravindra/authessa",
-  "logo": "http://rishravi.me/img/Authessa.png",
+  "logo": "https://static.e-junkie.com/sslpic/173811.83779935f035ff08f7768815fc00bb45.jpg",
   "keywords": ["node", "express", "mongo"],
-  "image": "http://rishravi.me/img/Authessa.png"
+  "image": "https://static.e-junkie.com/sslpic/173811.83779935f035ff08f7768815fc00bb45.jpg"
 }
