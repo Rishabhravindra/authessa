@@ -105,7 +105,7 @@ router.post('/login', function(req,res,next) {
 
 //GET for index
 router.get('/', function(req,res,next) {
-	return res.render('index', { title: 'Home'});
+	res.render('index', { title: 'Home'});
 });
 
 module.exports = router;
