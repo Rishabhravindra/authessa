@@ -105,11 +105,11 @@ Add Gilroy Font
 *************/
 @font-face {
     font-family: GilroyLight;
-    src: url(../fonts/Gilroy-Light.otf);
+    src: url(../font/Gilroy-Light.otf);
 }
 @font-face {
     font-family: GilroyBold;
-    src: url(../fonts/Gilroy-ExtraBold.otf);
+    src: url(../font/Gilroy-ExtraBold.otf);
 }
 /*************
 Error message
