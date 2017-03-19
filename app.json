@@ -1,0 +1,8 @@
+{
+  "name": "Authessa",
+  "description": "Simple authentication system built with Node, Express, and Mongo",
+  "repository": "https://github.com/Rishabhravindra/authessa",
+  "logo": "http://rishravi.me/img/Authessa.png",
+  "keywords": ["node", "express", "mongo"],
+  "image": "http://rishravi.me/img/Authessa.png"
+}
