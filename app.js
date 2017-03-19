@@ -58,8 +58,7 @@ app.use(function(err, req,res,next) {
 	});
 }); 
 
-app.set('port', (process.env.PORT || 5000));
-//listen to port 3000 and send message to console
-app.listen(app.get('port'), function() {
-	console.log('Express app started at port', app.get('port'))
+//listen to port 5000 and send message to console
+app.listen(process.env.PORT || 5000, function() {
+	console.log('Express app started at port')
 });
