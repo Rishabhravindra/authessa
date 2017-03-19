@@ -6,7 +6,7 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 //mongodb connection
-mongoose.connect("mongodb://localhost:27017/vandana");
+mongoose.connect("mongodb://rishravi:admin@ds135690.mlab.com:35690/heroku_97h5tt55");
 var db = mongoose.connection;
 
 //mongo error handler
