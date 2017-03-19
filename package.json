@@ -21,11 +21,12 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
+    "mongodb": "^2.2.25",
     "mongoose": "^4.9.0",
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta11"
   },
   "engines": {
-    "node" : "6.10.0"
+    "node": "6.10.0"
   }
 }
