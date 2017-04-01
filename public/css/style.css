@@ -2,7 +2,7 @@
 Global styles
 **************/
 body {
-    font-family: 'GilroyLight', sans-serif;
+    font-family: 'GilroyBold', sans-serif;
     background-color: #1A91FF;
 }
 html,
@@ -18,13 +18,11 @@ header {
 Navbar
 *************/
 .navbar {
-  font-family: 'GilroyBold',sans-serif;
   background-color: #1A91FF;
   box-shadow: 0 0 0 0 ;
 }
 
 .navbar-brand {
-  font-family: 'GilroyBold', sans-serif;
   font-size: 1.5rem;
 }
 /***************
@@ -36,7 +34,6 @@ Index hero
 }
 p {
   color: #fff;
-  font-family: 'GilroyBold', sans-serif;
   font-size: 45px;
 }
 .action {
@@ -74,14 +71,12 @@ login card
   margin-top: 4.5rem;
   padding-top: 2rem;}
 .card-title {
-  font-family: 'GilroyBold', sans-serif;
   color: #424242
 }
 .card-text {
   font-size: 18px;
 }
 .btn-signin, .btn-submit {
-  font-family: 'GilroyBold',sans-serif;
   background-color: #269CFF;
   border-radius: 6px;
 }
@@ -98,7 +93,6 @@ Registration
 }
 .h1-responsive {
   padding-top: 5rem;
-  font-family: 'GilroyBold', sans-serif;
 }
 .reg-form {
   padding-left: 4rem;
